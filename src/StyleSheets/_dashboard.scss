@@ -1,0 +1,322 @@
+@import "./mixins";
+@import "./variables";
+
+.container-routes {
+  display: flex;
+  width: 100%;
+  background-color: #f5f7fb;
+  margin-top: 65px;
+  // margin-left: 295px;
+  transition: 0.8s all;
+  .dashboard-content {
+    padding: 34px 35px;
+    width: 100%;
+    .flexy {
+      @include flexCenter(space-between, center);
+      label {
+        font-size: 28px;
+        font-weight: 500;
+        color: $primaryColor;
+      }
+      button {
+        @include flexCenter(space-between, "");
+        font-size: 14px;
+        background: #6763e3;
+        outline: none;
+        border: none;
+        padding: 14px 16px;
+        width: 146px;
+        color: $cardBackground;
+        border-radius: 6px;
+        cursor: pointer;
+        .additive-icons {
+          background-color: #514ddc;
+          border-radius: 50%;
+          font-size: $primaryColor;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+    .flexy-dashboard {
+      @include flexCenter("", "");
+      width: 100%;
+      margin-top: 2rem;
+
+      .inherit-content {
+        width: 69%;
+        @include flexCenter("", "");
+        flex-direction: column;
+        .sub-child-content {
+          width: 100%;
+          @include flexCenter("", "");
+          .pie-content {
+            // @include flexCenter("", center);
+            flex-direction: column;
+          }
+          .chart-content,
+          .pie-content {
+            .pt_10 {
+              padding-top: 10px;
+            }
+            .specify-chart {
+              width: 279px;
+              margin-top: 14px;
+            }
+            .pie-border {
+              width: 100%;
+              padding-top: 18px;
+              border-top: 1px solid #f0f4f7;
+              @include flexCenter(center, "");
+            }
+            width: 49%;
+            background: $cardBackground;
+            padding: 14px 25px 18px;
+            border-radius: $primaryBorderRadius;
+            .char-margin {
+              margin-top: 2rem;
+            }
+            .statistics {
+              padding-top: 10px;
+              @include flexCenter(space-between, center);
+              .select-option {
+                border: none;
+                outline: none;
+                background: transparent;
+              }
+            }
+          }
+          .pie-content {
+            margin-left: 2rem;
+            .pie-flex-content {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+            .apexcharts-align-center {
+              display: none;
+            }
+            .ml-18 {
+              margin-left: 18px;
+            }
+            .ml-27 {
+              margin-left: 27px;
+            }
+            .mt_10 {
+              margin-top: 10px;
+            }
+            .flexy-pie {
+              display: flex;
+              .mr-1 {
+                margin-right: 1rem;
+              }
+              .flex-dot {
+                @include flexCenter("", center);
+                .bg-blue {
+                  background-color: #80e2ff;
+                }
+                .bg-yellow {
+                  background-color: #ffdf94;
+                }
+                .bg-pink {
+                  background-color: #f49fa8;
+                }
+                .bg-voilet {
+                  background-color: #b5b3fb;
+                }
+                .dot {
+                  height: 10px;
+                  width: 10px;
+                  // background-color: #3b86ff;
+                  border-radius: 50%;
+                }
+                .pie-name {
+                  margin: 0 10px;
+                  font-size: $secondaryFontSize;
+                }
+                .pie-value {
+                  margin-right: 22px;
+                  font-size: $secondaryFontSize;
+                  color: #43425d8c;
+                }
+              }
+            }
+          }
+        }
+        .sub-child-table {
+          padding: 17px 23px;
+          background: $cardBackground;
+          height: 400px;
+          margin-top: 2rem;
+          border-radius: $primaryBorderRadius;
+          label {
+            color: #4d4f5c;
+          }
+          .datatable {
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            thead tr {
+              background-color: #f5f6fa;
+              th {
+                padding: 17px 12px;
+                color: #a3a6b4;
+                font-size: 14px;
+              }
+            }
+            tbody {
+              tr {
+                border-bottom: 1px solid #f0f4f7;
+                td {
+                  padding: 17px 12px;
+                  color: #4d4f5c;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+          .show-more {
+            color: #3b86ff;
+            margin-top: 1.5rem;
+            font-size: 14px;
+            padding-left: 12px;
+          }
+        }
+      }
+      .inherit-wide {
+        width: 30%;
+        margin-left: 2rem;
+        .profile-card {
+          background: $cardBackground;
+          border-radius: $primaryBorderRadius;
+          padding: 40px 25px 30px;
+          .profile-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .user-image {
+              position: relative;
+              .profile-pic {
+                border-radius: 50%;
+                height: 96px;
+                width: 96px;
+              }
+              .edit-icon {
+                background: #514ddc url("../Assests/icons.png") -254px 99% no-repeat
+                  padding-box;
+                @include imgSize(21px, 21px);
+                border-radius: 50%;
+                position: absolute;
+                right: 0;
+                top: 66%;
+              }
+            }
+            .user-name {
+              font-size: 16px;
+              padding: 14px 14px 8px;
+            }
+            .user-location {
+              color: #43425d;
+              font-size: 14px;
+            }
+            .social-media {
+              padding-top: 12px;
+              @include flexCenter("", "");
+              .social-icon {
+                // margin-right: 6px;
+                @include imgSize(30px, 30px);
+              }
+              .social-icon:nth-child(1) {
+                background: transparent url("../Assests/icons.png") -280px -3%
+                  no-repeat padding-box;
+              }
+              .social-icon:nth-child(2) {
+                background: transparent url("../Assests/icons.png") -308px -3%
+                  no-repeat padding-box;
+              }
+              .social-icon:nth-child(3) {
+                background: transparent url("../Assests/icons.png") -335px -3%
+                  no-repeat padding-box;
+              }
+              .social-icon:nth-child(4) {
+                background: transparent url("../Assests/icons.png") -363px -3%
+                  no-repeat padding-box;
+              }
+            }
+          }
+          .users-info {
+            @include flexCenter("", "");
+            flex-direction: column;
+            .mt_20 {
+              margin-top: 20px;
+            }
+            .our-flex {
+              border-top: 1px solid #f0f4f7;
+              padding: 23px 0px 23px;
+              margin-top: 10px;
+              @include flexCenter(space-between, center);
+              .ours-users {
+                font-size: 18px;
+              }
+            }
+            .dot-icon {
+              background: transparent url("../Assests/icons.png") -138px 100% no-repeat
+                padding-box;
+              @include imgSize(26px, 26px);
+            }
+            .user-info-flex {
+              @include flexCenter(space-between, end);
+              .flex-theni {
+                @include flexCenter("", center);
+                .info-image {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                  margin-right: 15px;
+                }
+                .info-name {
+                  font-size: 16px;
+                  font-weight: 600;
+                  margin-bottom: 7px;
+                }
+                .info-location {
+                  font-size: 14px;
+                  color: #43425d;
+                }
+              }
+              .info-mobile {
+                font-size: 14px;
+                color: #43425d;
+                margin-bottom: 4px;
+              }
+            }
+          }
+        }
+        .product {
+          // height: 465px;
+          background: $cardBackground;
+          border-radius: $primaryBorderRadius;
+          padding: 14px 25px 18px;
+          margin-top: 2rem;
+          .mt_1_5 {
+            margin-top: 1.5rem;
+          }
+          .our-flex {
+            @include flexCenter(space-between, center);
+            .ours-users {
+              font-size: 18px;
+            }
+            .dot-icon {
+              background: transparent url("../Assests/icons.png") -138px 100% no-repeat
+                padding-box;
+              @include imgSize(26px, 26px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "./sidebar";
+@import "./navbar";
+@import "./dashboard";
+@import "./mobile";
+@import "./mixins";
+@import "./variables";
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.container-wrap {
+  display: flex;
+}
+.nav-dashboard {
+  margin-left: 295px;
+  transition: 0.6s all;
+}
+.small_side_bar .nav-dashboard {
+  margin-left: 0;
+  transition: 0.6s all;
+}
+// .small_side_bar
+//   .container-routes
+//   .dashboard-content
+//   .flexy-dashboard
+//   .inherit-content
+//   .sub-child-content
+//   .chart-content
+//   .specify-chart,
+// .container-routes
+//   .dashboard-content
+//   .flexy-dashboard
+//   .inherit-content
+//   .sub-child-content
+//   .pie-content
+//   .specify-chart {
+//   width: 343px;
+// }
+.cursor-point {
+  cursor: pointer;
+}

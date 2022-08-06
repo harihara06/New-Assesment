@@ -1,0 +1,75 @@
+@import "./mixins";
+@import "./variables";
+.small_side_bar .side-bar {
+  left: -20%;
+  transition: 0.54s all;
+  .logo-container {
+    display: none;
+  }
+}
+.side-bar {
+  width: 295px;
+  background-color: $primaryColor;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: 0.54s all;
+  .logo-container {
+    padding: 18px 20px;
+    color: white;
+    font-size: 21px;
+    font-weight: 600;
+    background-color: $secondaryColor;
+    z-index: 999;
+  }
+  .ul-elements {
+    margin: 0;
+    padding: 0;
+    li:nth-child(2) {
+      border-left: 3px solid #a3a0fb;
+      background-color: #3c3b54;
+      .back-img {
+        background: transparent url("../Assests/icons.png") -83px -3% no-repeat
+          padding-box !important;
+      }
+    }
+    li:nth-child(3) {
+      .new-tag {
+        margin-left: 117px;
+        font-size: 10px;
+        border-radius: 10px;
+        padding: 2px 10px;
+        background: red;
+        color: white;
+        font-weight: 600;
+      }
+    }
+    li {
+      list-style-type: none;
+      @include flexCenter("", "");
+      padding: 15px 16px;
+      cursor: pointer;
+      margin: 3px 0;
+      cursor: pointer;
+      &:hover {
+        background-color: $secondaryColor;
+      }
+      .back-img {
+        @include imgSize(26px, 26px);
+        margin-right: 1rem;
+      }
+      .new-flex {
+        display: flex;
+        align-items: baseline;
+      }
+      .tagName {
+        margin-top: 0.1rem;
+        @include flexCenter(center, center);
+        color: white;
+        font-size: $primaryFontSize;
+      }
+    }
+    @include icons-inactive();
+  }
+}

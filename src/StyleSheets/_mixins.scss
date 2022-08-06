@@ -1,0 +1,32 @@
+@mixin flexCenter($justifyContent, $alignItems) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+@mixin icons-inactive() {
+  li:nth-child(1) .back-img {
+    background: transparent url("../Assests/icons.png") -0px -3% no-repeat
+      padding-box;
+  }
+  li:nth-child(2) .back-img {
+      background: transparent url("../Assests/icons.png") -56px -3% no-repeat
+        padding-box;
+  }
+  li:nth-child(3) .back-img {
+    background: transparent url("../Assests/icons.png") -112px -3% no-repeat
+      padding-box;
+  }
+  li:nth-child(4) .back-img {
+    background: transparent url("../Assests/icons.png") -168px -3% no-repeat
+      padding-box;
+  }
+  li:nth-child(5) .back-img {
+    background: transparent url("../Assests/icons.png") -224px -3% no-repeat
+      padding-box;
+  }
+  
+}
+@mixin imgSize($width, $height) {
+  height: $height;
+  width: $width;
+}
